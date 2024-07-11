@@ -30,11 +30,12 @@ int main()
 
     int result = fnCalc(n1, n2, op);
     printf(">> %d %c %d = %d \n", n1, op, n2, result);
-}
+} 
 
 // Viet ham thuc hien phep tinh +=*/% tren 2 so a, b. Tra ve kq cua phep toan
 int fnCalc(int a, int b, char op) {
     int r;
+    
     switch (op) {
     case '+':
         r = a + b;
