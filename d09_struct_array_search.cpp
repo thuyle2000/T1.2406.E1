@@ -34,12 +34,15 @@ int main()
         fseek(stdin,0,0);
         printf("\n >> nhap thong tin sv thu %d: \n", i+1);
         printf(" -id: "); 
-        // gets(ds[i].id);
-        fgets(ds[i].id,10,stdin);
+        gets(ds[i].id);
+        // fgets(ds[i].id,10,stdin);
+        
         printf(" -ho ten: "); 
-        // gets(ds[i].name);
-        fgets(ds[i].name,10,stdin);
-        puts(" -gioi tinh [M/F]: "); scanf("%c", &ds[i].gender);
+        gets(ds[i].name);
+        // fgets(ds[i].name,30,stdin);
+
+        fseek(stdin, 0,0);
+        printf(" -gioi tinh [M/F]: "); scanf("%c", &ds[i].gender);
         printf(" -nam sinh: "); scanf("%d", &ds[i].yob);
     }
     
@@ -52,25 +55,36 @@ int main()
     }
     
 
-    //sap xep lai ds theo ten sinh vien
-    struct STUDENT temp;
-    for (int i = 0; i < n-1; i++)
+    //tim kiem sinh vien theo ten: 
+    // user nhap ten sv muon tim, neu ct tim thay => in ra tt chi tiet cua ban
+    // sv do, ngc lai thong bao ko tim thay.
+
+    char search[31], yesno;
+    int cnt;
+    while (1==1)
     {
-        for (int j = n-1; j > i; j--)
+        cnt = 0;
+        fseek(stdin,0,0);
+        
+        printf(" >> nhap ten cua sinh vien muon tim: ");        
+        gets(search);
+
+        for (int i = 0; i <n; i++)
         {
-            if(strcmp(ds[j].name, ds[j-1].name)<0){
-                temp = ds[j];
-                ds[j] = ds[j-1];
-                ds[j-1] = temp;
+            if(strstr(ds[i].name, search)!=NULL){
+                printf("\t thong tin chi tiet: \n");
+                printf("\t\t id: %s, ho ten: %s, nam sinh:%d \n", ds[i].id, ds[i].name, ds[i].yob);
+                cnt++;
             }
         }
-    }
-    
 
-    printf("\n Danh sach sinh vien [xep thu tu theo ten] \n");
-    printf(" ******************* \n");
-    for (int i = 0; i < n; i++)
-    {
-        printf(" %s, %s, %c, %d \n", ds[i].id, ds[i].name, ds[i].gender, ds[i].yob);
+        if(cnt==0){
+            printf(" >> ko tim thay !!! \n");
+        }
+
+        printf("\n\t >> tiep tuc tim kiem ? (y/n) : ");
+        scanf("%c",&yesno);
+        if(yesno!='y' && yesno !='Y') break;
     }
+
 }
