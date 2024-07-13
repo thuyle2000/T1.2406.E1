@@ -46,7 +46,6 @@ int main()
         printf(" -nam sinh: "); scanf("%d", &ds[i].yob);
     }
     
-
     printf("\n Danh sach sinh vien \n");
     printf(" ******************* \n");
     for (int i = 0; i < n; i++)
@@ -54,7 +53,6 @@ int main()
         printf(" %s, %s, %c, %d \n", ds[i].id, ds[i].name, ds[i].gender, ds[i].yob);
     }
     
-
     //tim kiem sinh vien theo ten: 
     // user nhap ten sv muon tim, neu ct tim thay => in ra tt chi tiet cua ban
     // sv do, ngc lai thong bao ko tim thay.
@@ -65,7 +63,7 @@ int main()
     {
         cnt = 0;
         fseek(stdin,0,0);
-        
+
         printf(" >> nhap ten cua sinh vien muon tim: ");        
         gets(search);
 
@@ -82,7 +80,7 @@ int main()
             printf(" >> ko tim thay !!! \n");
         }
 
-        printf("\n\t >> tiep tuc tim kiem ? (y/n) : ");
+        printf("\n\t >> tiep tuc tim kiem ? (y) : ");
         scanf("%c",&yesno);
         if(yesno!='y' && yesno !='Y') break;
     }
