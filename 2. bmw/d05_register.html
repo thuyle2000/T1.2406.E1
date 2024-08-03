@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="css/form.css">
+    <style>
+        span{
+            color: red;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="d04_image_hover.html">
+            <h2>sign-up</h2>
+            <hr>
+
+            <div class="input">
+                <label for="">email </label>
+                <input type="email" name="email" id="email" required value="abc@123"><span>*</span>
+            </div>
+
+            <div class="input">
+                <label for="">password </label>
+                <input type="password" name="pass" id="pass"
+                required placeholder="nhap mat khau"
+                value="123"><span>*</span>
+            </div>
+            <div class="input">
+                <label for="">gender</label> 
+                <input type="radio" name="gender" id="gMale" checked value="male"> Male 
+                <input type="radio" name="gender" id="gFemale" value="female"> Female  
+            </div>
+            <div class="input">
+                <label for="">location</label>
+                <select name="location" id="location" required>
+                    <option value="SG">Saigon</option>
+                    <option value="HN">Hanoi</option>
+                    <option value="HU">Hue</option>
+                    <option value="CT">Cantho</option>
+                    <option value="HP">Haiphong</option>
+                    <option value="DN" selected>Danang</option>
+                    <option value="BD">Binhduong</option>
+                    <option value="BH">Bienhoa</option>
+                    <option value="VL">Vinhlong</option>
+                </select><span>*</span>
+            </div>
+
+            <div class="input">
+                <label for="">birthday</label> 
+                <input type="date" name="dob" id="dob" 
+                value="2000-08-15"><span>*</span>
+            </div>
+
+            <div class="input">
+                <label for="">phone</label> 
+                <input type="text" name="phone" id="phone" required
+                pattern="\d{2}-\d{4,6}"
+                placeholder="xx-xxxx[xx], x:digit (0-9)"
+                ><span>*</span>
+            </div>
+
+            <div class="input">
+                <label for="">rating</label>
+                <input type="number" name="rate" id="rate" value="3" min="1" max="5" required><span>*</span>
+            </div>
+
+            <div class="input">
+                <label for="">languages</label>
+                <input type="checkbox" name="lan1" id="lan1" value="VN" checked> VN
+                <input type="checkbox" name="lan2" id="lan2" value="EN" checked> EN
+                <input type="checkbox" name="lan3" id="lan3" value="FR"> FR
+            </div>
+
+            <div class="input">
+                <label for="" style="vertical-align: top;">comment</label>
+                <textarea name="comment" id="comment"
+                rows="5">nothing...</textarea> 
+            </div>
+
+            <div class="input" style="text-align: center;">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
