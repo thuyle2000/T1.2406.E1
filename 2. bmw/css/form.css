@@ -1,0 +1,45 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input{
+    color: blue;
+    font-size: 1.06em;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+}
+
+.input{
+    padding-top: 14px;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset']{
+    margin: 5px;
+    padding: 5px 20px 7px 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 3px grey;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+input[type='submit']{
+    background-color: darkorange;
+}
+
+input[type='reset']{
+    background-color: green;
+}
+
+form{
+    padding: 20px;
+    width: fit-content;
+    background-color: antiquewhite;
+    
+    box-shadow: 3px 3px 3px grey;
+}
