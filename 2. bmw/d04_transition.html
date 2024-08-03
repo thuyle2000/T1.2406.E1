@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+          
+        }
+        .text{
+            margin: 30px;
+            line-height: 1.5em;
+            color: black;
+            /* transition:color 15s; */
+            transition-property: all ;
+            transition-duration: 5s;
+            
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 1.3em;
+            color: red;
+        }
+
+        .text:hover{
+            color: green;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS Transition</h2>
+    <hr>
+    <div>
+        <p>
+            <a href="">Change Text Color</a>
+        </p>
+
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            
+            
+        </p>
+    </div>
+</body>
+
+</html>

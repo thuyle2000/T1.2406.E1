@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-hover</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        img{
+            margin: 10px;
+            width: 30vw;
+            padding: 20px;
+            border: thin solid tan;
+            box-shadow: 3px 3px 3px brown;
+            display: none;
+
+            position: relative;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 30px;
+            background-color: lavender;
+            border-radius: 50px;
+            box-shadow: 3px 3px 3px gray;
+            color: red;
+
+            position: relative;
+        }
+
+        a:hover img{
+            display: inline-block;
+        }
+
+        span{
+            position: absolute;
+            display: inline-block;
+            top: 0px;
+            left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Magic Image </h2>
+
+    <div>
+        <a href="#">Touch Me 
+         <span>
+            <img src="images/baby-1.jpg" alt="baby">
+         </span>
+        </a> 
+    </div>
+</body>
+</html>

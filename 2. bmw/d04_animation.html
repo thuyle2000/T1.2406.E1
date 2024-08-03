@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+
+            position: relative;
+            animation-name: triangle;
+            animation: triangle 3s linear 2s infinite forwards alternate;
+        }
+
+        @keyframes triangle {
+            0%{
+                top: 0px;  left: 0px;
+                background-color: red;
+            }
+
+            33%{
+                top: 0px;  left: 400px;
+                background-color: yellow;
+            }
+
+            66%{
+                top: 300px; left: 200px;
+                background-color: blue;
+            }
+
+            100%{
+                top: 0px; left: 0px;
+                background-color: red;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Anination Demo</h2>
+    <div></div>
+</body>
+</html>
