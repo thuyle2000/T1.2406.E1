@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-confirm</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>confirm() demo</h2>
+    <hr/>
+    <input type="button" value="close your window ?" id="btnClose">
+</body>
+<script>
+    //lap trinh cho su kien click vo nut [btnClose]
+    document.getElementById("btnClose").onclick=function(evt){
+        let answer = confirm(" are u sure ?");
+        console.log(`ket qua : ${answer}`);
+        if(answer==true){
+            window.close();  //dong cua so man hinh trinh duyet
+        }
+    }
+</script>
+</html>

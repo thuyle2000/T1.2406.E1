@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-eval-prompt</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>prompt(), eval() demo</h2>
+    <hr/>
+    <input type="button" value="mini casio" id="btCasio">
+    <p id="kq"></p>
+</body>
+<script>
+    //lap trinh cho su kien click vo nut co id=[btCasio]
+    document.getElementById("btCasio").onclick=function(evt){
+        
+        let exp = prompt("input your expression","10+19"); //bieu thuc defaut "10+19"
+
+        let kq = eval(exp);
+        document.getElementById("kq").innerText = `${exp} = ${kq}`
+    }
+</script>
+</html>

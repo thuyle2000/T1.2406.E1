@@ -36,6 +36,7 @@ input[type='reset']{
     color: antiquewhite;
     font-weight: bold;
     width: fit-content;
+    background-color: blue;
 }
 
 input[type='submit']{
