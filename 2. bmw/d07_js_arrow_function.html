@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow-function</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>JS Arrow Function Demo</h2>
+    <hr>
+    <form onsubmit="go(event)">
+        <div class="input">
+            <label for="">input number</label>
+            <input type="number" name="num" id="num" value="5" min="1" max="20" required>
+        </div>
+        <div class="input">
+            <label for="">factorial</label>
+            <input type="text" name="factor" id="factor" readonly>
+        </div>
+        <div class="input">
+            <input type="submit" value="Go">
+            <input type="reset" value="reset">
+        </div>
+    </form>
+
+    <script>
+        let fnFactorial = (n)=>{
+            let r =1;
+            for (let index = 2; index <=n; index++) {
+                r *= index;
+            }
+            return r;
+        }
+
+        function go(event){
+            event.preventDefault();
+
+            let num = parseInt( document.getElementById("num").value );
+            document.getElementById("factor").value = fnFactorial(num);
+        }
+
+    </script>
+</body>
+</html>
