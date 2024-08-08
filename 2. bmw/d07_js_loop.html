@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>JS Loop Demo</h2>
+    <hr>
+    <form id="formInput">
+        <div class="input">
+            <label for="">input number: </label>
+            <input type="number" name="num" id="num" value="5" min="0" max="20" required>
+        </div>
+
+        <div class="input">
+            <input type="submit" value="factorial">
+            <input type="reset" value="reset">
+        </div>
+    </form>
+
+    <p id="result"></p>
+
+</body>
+<script>
+    document.getElementById("formInput").onsubmit= function(ev){
+        ev.preventDefault();  // vo hieu hoa chuc nang chuyen trang action
+
+        let n = parseInt( document.getElementById("num").value );
+        let r = 1;
+
+        for (let index = 2; index <= n; index++) {
+            r *= index;
+        }
+
+        document.getElementById("result").innerHTML=`<b>${n}! = ${r}</b>`;
+
+    }
+</script>
+</html>

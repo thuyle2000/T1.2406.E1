@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>Regular Expression Demo</h2>
+    <hr/>
+    <form id="formInput">
+        <h3>Thong tin giao hang</h3>
+        <div class="input">
+            <label for="">nhap ten</label>
+            <input type="text" name="fname" id="fname" required
+            placeholder="Ten nguoi nhan hang">
+        </div>
+
+        <div class="input">
+            <label for="">nhap phone</label>
+            <input type="text" name="phone" id="phone" required
+            placeholder="so dien thoai lien he">
+        </div>
+
+        <div class="input">
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </div>
+    </form>
+</body>
+<script>
+    //lap trinh su kien bam nut submit tren form [formInput]
+    document.getElementById("formInput").onsubmit= function(ev){
+        ev.preventDefault(); // vo hieu hoa chuc nang submit
+
+        //kiem tra du lieu nhap co hop le hay ko ?
+        let fname = document.getElementById("fname").value.trim();
+
+        let regex = /^[a-z ]{2,30}$/i;
+        if(regex.test(fname)==false){
+            alert("ten nhap ko hop le !!!");
+            document.getElementById("fname").focus();
+            return ;
+        }
+
+        let search_pat = '^(\\d{7}|\\d{10,11})$';
+        let phone = document.getElementById("phone").value.trim();
+        regex = new RegExp(search_pat);
+        if(!regex.test(phone)){
+            alert("phone ko hop le !!!");
+            document.getElementById("phone").focus();
+            return ;
+        }
+        
+        alert("Cam on ban da cung cap thong tin !")
+    }
+</script>
+</html>
