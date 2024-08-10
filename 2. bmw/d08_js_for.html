@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <script>
+        var a = ["LBEP", "BMW", "UIUX", "REACT","DMS","PHP"];
+        const for_of = ()=>{
+            let s = "for of: ";
+            for (const item of a) {
+                s += (item + "-");
+            }
+            alert (s);
+        }
+
+        const for_in = ()=>{
+            let s = "for in: ";
+            for (const item in a) {
+                s += (item + "-");
+            }
+            alert(s);
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>JS FOR-OF/ FOR-IN</h2>
+    <hr>
+    <input type="button" value="for-of" onclick="for_of()">  - 
+    <input type="button" value="for-in" onclick="for_in()"> <br>
+</body>
+</html>
