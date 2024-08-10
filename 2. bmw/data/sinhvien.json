@@ -1,0 +1,30 @@
+[
+    {
+        "id": "sv01",
+        "name": "Anh Khoa",
+        "gender": "Male",
+        "dob": 2007,
+        "active": true
+    },
+    {
+        "id": "sv02",
+        "name": "Nguyen Pham Minh Dang",
+        "gender": "Male",
+        "dob": 2008,
+        "active": true
+    },
+    {
+        "id": "sv03",
+        "name": "Duong Quy Khang",
+        "gender": "Female",
+        "dob": 2008,
+        "active": true
+    },
+    {
+        "id": "sv04",
+        "name": "Duong Qua",
+        "gender": "Male",
+        "dob": 1090,
+        "active": false
+    }
+]

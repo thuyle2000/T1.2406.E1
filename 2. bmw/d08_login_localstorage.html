@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <div>
+        <h2>Login</h2>
+        <hr>
+
+        <!-- tao mau bieu dang nhap -->
+        <form action="d04_animation.html" method="get" onsubmit="return KiemTraAcc(event)">
+            <div class="input">
+                <label for="">username</label>
+                <input type="text" name="n_user" id="user" value="aptech" required>
+            </div>
+            <div class="input">
+                <label for="">password</label>
+                <input type="password" name="n_pass" id="pwd" value="123" required>
+            </div>
+            <div class="input">
+                <input type="checkbox" name="n_rem" id="rem" checked value="true"> Remember Me
+            </div>
+            <div class="input">
+                <input type="submit" value="dong y">
+                <input type="reset" value="huy">
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    const KiemTraAcc = (event) => {
+        const uid = document.getElementById("user").value.trim();
+        const pwd = document.getElementById("pwd").value.trim();
+
+        const l_uid = localStorage["uid"];
+        const l_pwd = localStorage.getItem("pwd");
+
+        if (uid == l_uid) {
+            if (pwd == l_pwd) {
+                alert("Dang nhap thanh cong !");
+                return true;
+            }
+            else {
+                alert("Loi: Mat ma ko chinh xac !");
+                document.getElementById("pwd").focus();
+                return false;
+            }
+        } else {
+            alert("Loi: Tai khoan ko ton tai !");
+            document.getElementById("user").focus();
+            return false;
+        }
+
+        
+    }
+</script>
+
+</html>

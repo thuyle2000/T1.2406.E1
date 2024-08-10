@@ -1,0 +1,23 @@
+[
+    {
+        "id":"P001",
+        "name":"coca cola",
+        "price":12.34,
+        "in-stock": true,
+        "store":["hcmc","hn"]
+    },
+    {
+        "id":"P002",
+        "name":"orangina",
+        "price":15,
+        "in-stock": true,
+        "store":["hcmc","hn", "dn"]
+    },
+    {
+        "id":"P003",
+        "name":"potatoes snack",
+        "price":5,
+        "in-stock": false,
+        "store":["hcmc"]
+    }
+]
