@@ -1,0 +1,9 @@
+[
+    {"id":"E01", "name":"Pham Nhat Minh", "gender":"male", "salary":1000},
+    {"id":"E02", "name":"Nguyen Pham Minh Dang", "gender":"male", "salary":100},
+    {"id":"E03", "name":"Duong Quang Khanh", "gender":"female", "salary":890},
+    {"id":"E04", "name":"Nguyen Hung", "gender":"male", "salary":400},
+    {"id":"E05", "name":"Pham Minh Chien", "gender":"male", "salary":876},
+    {"id":"E06", "name":"Phan Huy Nguyen", "gender":"male", "salary":1000},
+    {"id":"E07", "name":"Tran Tieu Vy", "gender":"female", "salary":300}
+]
